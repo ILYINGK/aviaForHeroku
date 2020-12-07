@@ -9,7 +9,6 @@ public class Flight {
     long id;
     int flightNumber;
     String planeModel;
-    Date arrivalTime;
-    Date departureTime;
+
 
     }

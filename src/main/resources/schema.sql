@@ -2,17 +2,18 @@
 CREATE TABLE flights
 (
     id            INTEGER PRIMARY KEY AUTOINCREMENT,
-    flight_id     INTEGER CHECK (flight_number >= 0),
+    flight_id     INTEGER CHECK (flight_id >= 0),
     flight_number INTEGER CHECK (flight_number >= 0),
-    plane_model   TEXT NOT NULL,
-    arrivalTime   DATE    NOT NULL CHECK (arrivalTime > 0) ,
-    departureTime DATE    NOT NULL CHECK (departureTime > 0)
+    plane_model   TEXT NOT NULL
+
+
+
 );
 
 CREATE TABLE passengers
 (
     id               INTEGER PRIMARY KEY AUTOINCREMENT,
-    passenger_id     INTEGER NOT NULL REFERENCES flights,
+    passenger_id     INTEGER NOT NULL ,
     first_name       TEXT    NOT NULL ,
     second_name      TEXT    NOT NULL ,
     passport_number  INTEGER CHECK (passport_number >= 0) ,

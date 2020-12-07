@@ -11,27 +11,14 @@ import java.sql.SQLException;
 public class FlightRowMapper implements RowMapper<Flight>{
     public Flight mapRow(ResultSet rs, int rowNum) throws SQLException{
         return new Flight(
-                rs.getLong("id"),
+
                 rs.getLong("flight_id"),
-                rs.getLong("flight_number"),
-                rs.getString("plane_model"),
-                rs.getLong("arrivalTime"),
-                rs.getLong("departureTime")
+                rs.getInt("flight_number"),
+                rs.getString("plane_model")
 
 
 
-        );
-    }
-}
-@Component
-public class FlatRowMapper implements RowMapper<Flat> {
-    public Flat mapRow(ResultSet rs, int rowNum) throws SQLException {
-        return new Flat(
-                rs.getLong("id"),
-                rs.getLong("owner_id"),
-                rs.getString("district"),
-                rs.getInt("price"),
-                rs.getInt("rooms")
+
         );
     }
 }
