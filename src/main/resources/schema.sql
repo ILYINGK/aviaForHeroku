@@ -24,10 +24,10 @@ CREATE TABLE baggage_declarations
     baggage_declaration_id INTEGER NOT NULL,
     passenger_id           INTEGER REFERENCES passengers,
     sum_item               INTEGER CHECK (sum_item >= 0),
-    first_item_number      INTEGER CHECK (first_item_number > 0),
-    second_item_number     INTEGER CHECK (second_item_number > 0),
-    third_item_number      INTEGER CHECK (third_item_number > 0),
-    fourth_item_number     INTEGER CHECK (fourth_item_number > 0),
-    sum_weight             INTEGER CHECK (sum_weight > 0)
+    first_item_number      INTEGER CHECK (first_item_number >= 0),
+    second_item_number     INTEGER CHECK (second_item_number >= 0),
+    third_item_number      INTEGER CHECK (third_item_number >= 0),
+    fourth_item_number     INTEGER CHECK (fourth_item_number >= 0),
+    sum_weight             INTEGER CHECK (sum_weight >= 0)
 
 );

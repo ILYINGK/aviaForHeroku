@@ -24,10 +24,8 @@ INSERT INTO baggage_declarations(baggage_declaration_id,
                                  third_item_number,
                                  fourth_item_number,
                                  sum_weight)  VALUES
-(1,1, 'Petrov','Ivan',9807123456,1),
-(2,2, 'Suvorov','Aleksey',6345123456,0),
-(2,3, 'Ivanov','Nikolay',9878523234,1),
-(3,4, 'Patin','Ivan',9807123456,1),
-(3,5, 'Volkov','Aleksey',6345123456,0),
-(3,6, 'Selin','Robert',9345623234,1);
+(101,1, 1,204,0,0,0,15),
+(102,3, 2,205,206,0,0,25),
+(103,4, 1,207,0,0,0,13),
+(104,6, 3,208,209,210,0,31);
 
