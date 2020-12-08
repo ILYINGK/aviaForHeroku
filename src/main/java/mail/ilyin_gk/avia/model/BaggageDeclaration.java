@@ -6,7 +6,7 @@ import lombok.Value;
 @Value
 public class BaggageDeclaration {
     long id;
-    int passengerId;
+    long passengerId;
     int sumItem;
     int firstItemNumber;
     int secondItemNumber;

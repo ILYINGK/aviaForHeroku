@@ -14,7 +14,7 @@ public class BaggageDeclarationRowMapper implements RowMapper<BaggageDeclaration
         return new BaggageDeclaration(
 
                 rs.getLong("baggage_declaration_id"),
-                rs.getInt("passenger_id"),
+                rs.getLong("passenger_id"),
                 rs.getInt("sum_item"),
                 rs.getInt("first_item_number"),
                 rs.getInt("second_item_number"),
