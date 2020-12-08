@@ -1,3 +1,33 @@
-INSERT INTO flights(flight_id,flight_number,arrivalTime,departureTime )  VALUES
-(1, 'Vasya'),
-(2, 'Petya');
+INSERT INTO flights(flight_id,flight_number,plane_model )  VALUES
+(1,345, 'A350'),
+(2,604, 'Boeing787'),
+(3,678, 'Boeing787');
+
+INSERT INTO passengers(flight_id,
+                       passenger_id,
+                       first_name,
+                       second_name,
+                       passport_number,
+                       baggage_on_board )  VALUES
+(1,1, 'Petrov','Ivan',9807123456,1),
+(2,2, 'Suvorov','Aleksey',6345123456,0),
+(2,3, 'Ivanov','Nikolay',9878523234,1),
+(3,4, 'Patin','Ivan',9807123456,1),
+(3,5, 'Volkov','Aleksey',6345123456,0),
+(3,6, 'Selin','Robert',9345623234,1);
+
+INSERT INTO baggage_declarations(baggage_declaration_id,
+                                 passenger_id,
+                                 sum_item,
+                                 first_item_number,
+                                 second_item_number,
+                                 third_item_number,
+                                 fourth_item_number,
+                                 sum_weight)  VALUES
+(1,1, 'Petrov','Ivan',9807123456,1),
+(2,2, 'Suvorov','Aleksey',6345123456,0),
+(2,3, 'Ivanov','Nikolay',9878523234,1),
+(3,4, 'Patin','Ivan',9807123456,1),
+(3,5, 'Volkov','Aleksey',6345123456,0),
+(3,6, 'Selin','Robert',9345623234,1);
+
