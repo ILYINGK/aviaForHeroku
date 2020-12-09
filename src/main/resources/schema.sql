@@ -1,6 +1,6 @@
 CREATE TABLE flights
 (
-    id            INTEGER PRIMARY KEY AUTO_INCREMENT,
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
     flight_id     INTEGER CHECK (flight_id >= 0),
     flight_number INTEGER CHECK (flight_number >= 0),
     plane_model   TEXT NOT NULL
@@ -10,7 +10,7 @@ CREATE TABLE flights
 
 CREATE TABLE passengers
 (
-    id               INTEGER PRIMARY KEY AUTO_INCREMENT,
+    id               INTEGER PRIMARY KEY AUTOINCREMENT,
     flight_id INTEGER REFERENCES flights,
     passenger_id     INTEGER NOT NULL,
     first_name       TEXT    NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE passengers
 );
 CREATE TABLE baggage_declarations
 (
-    id                     INTEGER PRIMARY KEY AUTO_INCREMENT,
+    id                     INTEGER PRIMARY KEY AUTOINCREMENT,
     baggage_declaration_id INTEGER NOT NULL,
     passenger_id           INTEGER REFERENCES passengers,
     sum_item               INTEGER CHECK (sum_item >= 0),
