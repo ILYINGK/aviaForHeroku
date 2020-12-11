@@ -35,6 +35,19 @@ public class AvianController {
     public List<BaggageDeclaration> getByOwnerId(@PathVariable long passengerId) {
         return manager.getAllbaggageDeclarationByOwner(passengerId);
     }
+    @PostMapping("/save")
+    public Passenger save(@RequestBody Passenger item) {
+        return manager.save(item);
+    }
 
+    @DeleteMapping("/{id}")
+    public Passenger removeById(@PathVariable long id) {
+        return manager.removeById(id);
+    }
+
+   // @GetMapping("/totalbaggageweidht")
+    //public List<Integer> getTotalWeight() {
+   //     return manager.totalweight();
+   // }
 
 }

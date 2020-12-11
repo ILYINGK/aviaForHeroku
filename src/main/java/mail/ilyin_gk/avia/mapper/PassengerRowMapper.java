@@ -13,7 +13,7 @@ public class PassengerRowMapper implements RowMapper<Passenger> {
     public Passenger mapRow(ResultSet rs, int rowNum) throws SQLException {
         return new Passenger(
 
-                rs.getLong("passenger_id"),
+                rs.getLong("id"),
                 rs.getLong("flight_id"),
                 rs.getString("first_name"),
                 rs.getString("second_name"),

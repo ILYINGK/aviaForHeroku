@@ -13,7 +13,7 @@ public class BaggageDeclarationRowMapper implements RowMapper<BaggageDeclaration
     public BaggageDeclaration mapRow(ResultSet rs, int rowNum) throws SQLException {
         return new BaggageDeclaration(
 
-                rs.getLong("baggage_declaration_id"),
+                rs.getLong("id"),
                 rs.getLong("passenger_id"),
                 rs.getInt("sum_item"),
                 rs.getInt("first_item_number"),

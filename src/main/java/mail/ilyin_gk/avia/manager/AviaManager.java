@@ -27,28 +27,28 @@ public class AviaManager {
     private final NamedParameterJdbcTemplate template;
     //private final OveralBaggageMassCountService overalBaggageMassCountService;
 
-   // private final FlightRowMapper flightRowMapper;
+   private final FlightRowMapper flightRowMapper;
 
     private final PassengerRowMapper passengerRowMapper;
     private final BaggageDeclarationRowMapper baggageDeclarationRowMapper;
 
     public List<Passenger> getAllpassengers() {
         return template.query(
-                "SELECT id, flight_id, passenger_id, first_name, second_name,passport_number,passenger_on_board,baggage_on_board FROM passengers ORDER BY id LIMIT 50",
+                "SELECT id, flight_id,  first_name, second_name,passport_number,passenger_on_board,baggage_on_board FROM passengers ORDER BY id LIMIT 50",
                 passengerRowMapper
         );
     }
 
     public Passenger getById(long id) {
         return template.queryForObject(
-                "SELECT id, flight_id, passenger_id, first_name, second_name,passport_number,passenger_on_board,baggage_on_board FROM passengers WHERE id = :id",
+                "SELECT id, flight_id,  first_name, second_name,passport_number,passenger_on_board,baggage_on_board FROM passengers WHERE id = :id",
                 Map.of("id", id),
                 passengerRowMapper
         );
     }
     public List<Passenger> searchPassenger(String firstName, String secondName) {
         return template.query(
-                "SELECT id, flight_id, passenger_id, first_name, second_name,passport_number,passenger_on_board,baggage_on_board FROM passengers WHERE first_name = :first_name AND second_name= :second_name",
+                "SELECT id, flight_id,  first_name, second_name,passport_number,passenger_on_board,baggage_on_board FROM passengers WHERE first_name = :first_name AND second_name= :second_name",
                 //Map.of("first_name", firstName, "second_name", secondName),
                 Map.of("first_name",firstName,"second_name",secondName),
                 passengerRowMapper
@@ -57,7 +57,7 @@ public class AviaManager {
 
     public List<Passenger> getPassportDyId(long id) {
         return template.query(
-                "SELECT passenger_id, first_name, second_name,passport_number FROM passengers WHERE passenger_id = :passenger_id",
+                "SELECT id, first_name, second_name,passport_number FROM passengers WHERE passenger_id = :passenger_id",
                 Map.of("passenger_id", id),
                 passengerRowMapper
         );
@@ -66,8 +66,8 @@ public class AviaManager {
     public List<BaggageDeclaration> getAllbaggageDeclarationByOwner(long passengerId) {
         return template.query(
                 "SELECT id," +
-                        "baggage_declaration_id," +
-                        "passenger_id,sum_item," +
+                        "passenger_id," +
+                        "sum_item," +
                         "first_item_number," +
                         "second_item_number," +
                         "third_item_number," +
@@ -82,11 +82,10 @@ public class AviaManager {
         if (item.getId() == 0) {
             KeyHolder keyHolder = new GeneratedKeyHolder();
             template.update(
-                    "INSERT INTO passengers(flight_id, passenger_id, first_name, second_name,passport_number,passenger_on_board,baggage_on_board) " +
-                            "VALUES (:flight_id, :passenger_id, :first_name, :second_name, :passport_number, :passenger_on_board, :baggage_on_board)",
+                    "INSERT INTO passengers(flight_id,  first_name, second_name,passport_number,passenger_on_board,baggage_on_board) " +
+                            "VALUES (:flight_id, :first_name, :second_name, :passport_number, :passenger_on_board, :baggage_on_board)",
                     new MapSqlParameterSource(Map.of(
                             "flight_id", item.getFlightId(),
-                            "passenger_id", item.getId(),
                             "first_name", item.getFirstName(),
                             "second_name", item.getSecondName(),
                             "passport_number", item.getPassportNumber(),
@@ -101,11 +100,10 @@ public class AviaManager {
         }
 
         template.update(
-                "UPDATE passengers SET flight_id = :flight_id, passenger_id = :passenger_id, first_name = :first_name, second_name = :second_name," +
+                "UPDATE passengers SET flight_id = :flight_id, first_name = :first_name, second_name = :second_name," +
                         " passport_number = :passport_number, passenger_on_board = :passenger_on_board, baggage_on_board = :baggage_on_board WHERE id = :id",
                 Map.of(
                         "flight_id", item.getFlightId(),
-                        "passenger_id", item.getId(),
                         "first_name", item.getFirstName(),
                         "second_name", item.getSecondName(),
                         "passport_number", item.getPassportNumber(),
@@ -117,4 +115,20 @@ public class AviaManager {
         return getById(item.getId());
     }
 
+    public Passenger removeById(long id) {
+        Passenger item = getById(id);
+
+        template.update(
+                "DELETE FROM passengers WHERE id = :id",
+                Map.of("id", item.getId())
+        );
+
+        return item;
+    }
+  /*  public Integer calculatePassengersWithBaggage(long id) {
+        // TODO: по id достаёте квартиру
+        // TODO: берёте стоимость и делите по месяцам
+        final var Passenger = getById(id);
+        return overalBaggageMassCountService.calculate(Passenger.isBaggageOnBoard());
+    }*/
 }

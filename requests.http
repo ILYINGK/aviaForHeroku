@@ -2,23 +2,31 @@ GET https://avia-terminal.herokuapp.com/avian/passengers
 
 
 ###
+GET http://127.0.0.1:8080/avian/passengers
 
+
+###
 GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
 ###
 
 GET http://127.0.0.1:8080/avian/baggagebyowner/3
 
 ###
-POST https://project-flats.herokuapp.com/flats
+POST http://127.0.0.1:8080/avian/save
 Content-Type: application/json
 
 {
-  "id": 5,
-  "ownerId": 1,
-  "district": "Ново-Савиновский",
-  "price": 3,
-  "rooms": 1
+  "flightId": 1,
+  "passengerId": 7,
+  "firstName": "Red",
+  "secondName": "Robert",
+  "passportNumber": 934562323,
+  "passengerOnBoard": false,
+  "baggageOnBoard": true
 }
+###
+POST http://127.0.0.1:8080/avian/3
+
 
 ###
 

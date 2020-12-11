@@ -12,7 +12,7 @@ public class FlightRowMapper implements RowMapper<Flight>{
     public Flight mapRow(ResultSet rs, int rowNum) throws SQLException{
         return new Flight(
 
-                rs.getLong("flight_id"),
+                rs.getLong("id"),
                 rs.getInt("flight_number"),
                 rs.getString("plane_model"),
                 rs.getTimestamp("arrival_time"),
