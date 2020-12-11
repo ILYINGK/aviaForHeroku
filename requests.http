@@ -1,0 +1,46 @@
+GET https://avia-terminal.herokuapp.com/avian/passengers
+
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
+###
+
+GET http://127.0.0.1:8080/avian/baggagebyowner/3
+
+###
+POST https://project-flats.herokuapp.com/flats
+Content-Type: application/json
+
+{
+  "id": 5,
+  "ownerId": 1,
+  "district": "Ново-Савиновский",
+  "price": 3,
+  "rooms": 1
+}
+
+###
+
+GET https://project-flats.herokuapp.com/flats/1
+
+###
+
+GET https://project-flats.herokuapp.com/flats/search?district=Ново-Савиновский&rooms=1
+
+###
+
+GET https://project-flats.herokuapp.com/flats/save?id=0&district=Ново-Савиновский&rooms=1
+
+###
+
+POST https://project-flats.herokuapp.com/flats
+Content-Type: application/json
+
+{
+  "id": 5,
+  "ownerId": 1,
+  "district": "Ново-Савиновский",
+  "price": 3,
+  "rooms": 1
+}
