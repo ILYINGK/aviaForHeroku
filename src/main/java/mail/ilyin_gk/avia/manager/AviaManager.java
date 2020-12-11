@@ -33,10 +33,12 @@ public class AviaManager {
 
     public List<Passenger> getAllpassengers() {
         return template.query(
-                "SELECT id, flight_id, passenger_id, first_name, second_name,passport_number,baggage_on_board FROM passengers ORDER BY id LIMIT 50",
+                "SELECT id, flight_id, passenger_id, first_name, second_name,passport_number,passenger_on_board,baggage_on_board FROM passengers ORDER BY id LIMIT 50",
                 passengerRowMapper
         );
     }
+
+
 
     public List<BaggageDeclaration> getAllbaggageDeclarations() {
         return template.query(

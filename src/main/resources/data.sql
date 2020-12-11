@@ -1,20 +1,22 @@
-INSERT INTO flights(flight_id,flight_number,plane_model )  VALUES
-(1,345, 'A350'),
-(2,604, 'Boeing787'),
-(3,678, 'Boeing787');
+INSERT INTO flights(flight_id,flight_number,plane_model,arrival_time,departure_time )  VALUES
+(1,345, 'A350','2020-12-31 23:47:00','2021-01-01 03:09:00'),
+(2,604, 'Boeing787','2020-12-31 22:07:00','2021-01-01 05:34:00'),
+(3,678, 'Boeing787','2020-12-31 23:15:00','2021-01-01 07:47:00');
+
 
 INSERT INTO passengers(flight_id,
                        passenger_id,
                        first_name,
                        second_name,
                        passport_number,
+                       passenger_on_board,
                        baggage_on_board )  VALUES
-(1,1, 'Petrov','Ivan',980712345,1),
-(2,2, 'Suvorov','Aleksey',634512345,0),
-(2,3, 'Ivanov','Nikolay',987852323,1),
-(3,4, 'Patin','Ivan',980712345,1),
-(3,5, 'Volkov','Aleksey',634512345,0),
-(3,6, 'Selin','Robert',934562323,1);
+(1,1, 'Petrov','Ivan',980712345,0,1),
+(2,2, 'Suvorov','Aleksey',634512345,0,0),
+(2,3, 'Ivanov','Nikolay',987852323,1,1),
+(3,4, 'Patin','Ivan',980712345,0,1),
+(3,5, 'Volkov','Aleksey',634512345,1,0),
+(3,6, 'Selin','Robert',934562323,0,1);
 
 INSERT INTO baggage_declarations(baggage_declaration_id,
                                  passenger_id,

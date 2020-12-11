@@ -7,6 +7,7 @@ public class Passenger {
     long id;
     String firstName;
     String secondName;
-    int passportNumber;
+    long passportNumber;
+    boolean passengerOnBoard;
     boolean baggageOnBoard;
 }

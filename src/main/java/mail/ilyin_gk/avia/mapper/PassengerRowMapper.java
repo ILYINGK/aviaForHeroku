@@ -17,6 +17,7 @@ public class PassengerRowMapper implements RowMapper<Passenger> {
                 rs.getString("first_name"),
                 rs.getString("second_name"),
                 rs.getInt("passport_number"),
+                rs.getBoolean("passenger_on_board"),
                 rs.getBoolean("baggage_on_board")
 
         );

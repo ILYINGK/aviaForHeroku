@@ -14,7 +14,9 @@ public class FlightRowMapper implements RowMapper<Flight>{
 
                 rs.getLong("flight_id"),
                 rs.getInt("flight_number"),
-                rs.getString("plane_model")
+                rs.getString("plane_model"),
+                rs.getTimestamp("arrival_time"),
+                rs.getTimestamp("departure_time")
 
 
 

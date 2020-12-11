@@ -1,22 +1,25 @@
 CREATE TABLE flights
 (
-    id            INTEGER PRIMARY KEY AUTO_INCREMENT,
-    flight_id     INTEGER CHECK (flight_id >= 0),
-    flight_number INTEGER CHECK (flight_number >= 0),
-    plane_model   TEXT NOT NULL
+    id             INTEGER PRIMARY KEY AUTO_INCREMENT,
+    flight_id      INTEGER CHECK (flight_id >= 0),
+    flight_number  INTEGER CHECK (flight_number >= 0),
+    plane_model    TEXT NOT NULL,
+    arrival_time   TIMESTAMP NOT NULL,
+    departure_time TIMESTAMP NOT NULL
 
 
 );
 
 CREATE TABLE passengers
 (
-    id               INTEGER PRIMARY KEY AUTO_INCREMENT,
-    flight_id INTEGER REFERENCES flights,
-    passenger_id     INTEGER NOT NULL,
-    first_name       TEXT    NOT NULL,
-    second_name      TEXT    NOT NULL,
-    passport_number  INTEGER CHECK (passport_number >= 0),
-    baggage_on_board BIT DEFAULT 0
+    id                INTEGER PRIMARY KEY AUTO_INCREMENT,
+    flight_id         INTEGER REFERENCES flights,
+    passenger_id      INTEGER NOT NULL,
+    first_name        TEXT    NOT NULL,
+    second_name       TEXT    NOT NULL,
+    passport_number   BIGINT CHECK (passport_number >= 0),
+    passenger_on_board BOOLEAN DEFAULT false,
+    baggage_on_board  BOOLEAN DEFAULT false
 );
 CREATE TABLE baggage_declarations
 (
