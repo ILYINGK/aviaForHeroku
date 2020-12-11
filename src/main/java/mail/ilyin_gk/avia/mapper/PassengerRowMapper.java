@@ -14,6 +14,7 @@ public class PassengerRowMapper implements RowMapper<Passenger> {
         return new Passenger(
 
                 rs.getLong("passenger_id"),
+                rs.getLong("flight_id"),
                 rs.getString("first_name"),
                 rs.getString("second_name"),
                 rs.getInt("passport_number"),

@@ -22,5 +22,19 @@ public class AvianController {
     @GetMapping("/passengers")
     public List<Passenger> getByAll() {return manager.getAllpassengers();
     }
+    @GetMapping("/passengers/{id}")
+    public Passenger getById(@PathVariable long id) {
+        return manager.getById(id);
+    }
+
+    @GetMapping("/passengers/search")
+    public List<Passenger> search(@RequestParam String firstName, @RequestParam String secondName) {
+        return manager.searchPassenger(firstName, secondName);
+    }
+    @GetMapping("/baggagebyowner/{passengerId}")
+    public List<BaggageDeclaration> getByOwnerId(@PathVariable long passengerId) {
+        return manager.getAllbaggageDeclarationByOwner(passengerId);
+    }
+
 
 }
