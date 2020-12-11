@@ -49,9 +49,10 @@ public class AvianController {
         return manager.removeById(id);
     }
 
-   // @GetMapping("/totalbaggageweidhtonflight/{id}")
-    //public List<Integer> getTotalWeight(@PathVariable long id) {
-    //    return manager.totalweight();
-    //}
+    @GetMapping("/totalbaggageweidht")
+    public Integer getTotalWeight() {
+        return manager.totalweight();
+    }
+
 
 }

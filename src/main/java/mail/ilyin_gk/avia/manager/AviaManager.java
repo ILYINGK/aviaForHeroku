@@ -1,6 +1,7 @@
 package mail.ilyin_gk.avia.manager;
 
 import lombok.RequiredArgsConstructor;
+
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -15,7 +16,7 @@ import mail.ilyin_gk.avia.model.BaggageDeclaration;
 import mail.ilyin_gk.avia.model.Passenger;
 import mail.ilyin_gk.avia.model.Flight;
 
-import mail.ilyin_gk.avia.service.OveralBaggageMassCountService;
+import mail.ilyin_gk.avia.service.TotalBaggageMassCountService;
 
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AviaManager {
     private final NamedParameterJdbcTemplate template;
-    //private final OveralBaggageMassCountService overalBaggageMassCountService;
 
+    private TotalBaggageMassCountService totalBaggageMassCountService;
    private final FlightRowMapper flightRowMapper;
 
     private final PassengerRowMapper passengerRowMapper;
@@ -54,11 +55,18 @@ public class AviaManager {
                 passengerRowMapper
         );
     }
-    public List<BaggageDeclaration> ListOfWeightOnBoard(long flightId) {
+    public List<BaggageDeclaration> getALLbaggageDeclarations() {
         return template.query(
-                "SELECT sum_weight FROM declarations WHERE flight_id = :flight_id ",
+                "SELECT id," +
+                        "passenger_id," +
+                        "sum_item," +
+                        "first_item_number," +
+                        "second_item_number," +
+                        "third_item_number," +
+                        "fourth_item_number," +
+                        "sum_weight " +
+                        "FROM baggage_declarations WHERE passenger_id = :passenger_id",
 
-                Map.of("flight_id",flightId),
                 baggageDeclarationRowMapper
         );
     }
@@ -133,10 +141,8 @@ public class AviaManager {
 
         return item;
     }
-  /*  public Integer calculatePassengersWithBaggage(long id) {
-        // TODO: по id достаёте квартиру
-        // TODO: берёте стоимость и делите по месяцам
-        final var Passenger = getById(id);
-        return overalBaggageMassCountService.calculate(Passenger.isBaggageOnBoard());
-    }*/
+    public Integer totalweight() {
+
+        return totalBaggageMassCountService.calculate();
+    }
 }

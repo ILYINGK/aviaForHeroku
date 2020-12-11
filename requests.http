@@ -10,8 +10,12 @@ GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Iv
 ###
 
 GET http://127.0.0.1:8080/avian/baggagebyowner/3
+###
+
+GET http://127.0.0.1:8080/avian/totalbaggageweidht
 
 ###
+
 POST http://127.0.0.1:8080/avian/save
 Content-Type: application/json
 
