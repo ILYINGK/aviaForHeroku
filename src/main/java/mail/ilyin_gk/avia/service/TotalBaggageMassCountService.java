@@ -12,7 +12,7 @@ public class TotalBaggageMassCountService {
         //List<Integer> result = new LinkedList<>();
 
         //result.add(7);
-
+result = 7;
         return result;}
     /*public Integer calculate(List<BaggageDeclaration> array) {
         int totalWeight = 0;

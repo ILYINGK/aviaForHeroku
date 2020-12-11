@@ -2,6 +2,7 @@ package mail.ilyin_gk.avia.manager;
 
 import lombok.RequiredArgsConstructor;
 
+import mail.ilyin_gk.avia.exception.DataAccessException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -138,11 +139,12 @@ public class AviaManager {
                 "DELETE FROM passengers WHERE id = :id",
                 Map.of("id", item.getId())
         );
-
+///комент
         return item;
     }
     public Integer totalweight() {
 
         return totalBaggageMassCountService.calculate();
+
     }
 }
