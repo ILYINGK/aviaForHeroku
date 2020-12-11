@@ -54,6 +54,14 @@ public class AviaManager {
                 passengerRowMapper
         );
     }
+    public List<BaggageDeclaration> ListOfWeightOnBoard(long flightId) {
+        return template.query(
+                "SELECT sum_weight FROM declarations WHERE flight_id = :flight_id ",
+
+                Map.of("flight_id",flightId),
+                baggageDeclarationRowMapper
+        );
+    }
 
     public List<Passenger> getPassportDyId(long id) {
         return template.query(

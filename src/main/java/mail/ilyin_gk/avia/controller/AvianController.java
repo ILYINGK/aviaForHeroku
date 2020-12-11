@@ -20,8 +20,10 @@ public class AvianController {
     private final AviaManager manager;
 
     @GetMapping("/passengers")
-    public List<Passenger> getByAll() {return manager.getAllpassengers();
+    public List<Passenger> getByAll() {
+        return manager.getAllpassengers();
     }
+
     @GetMapping("/passengers/{id}")
     public Passenger getById(@PathVariable long id) {
         return manager.getById(id);
@@ -31,10 +33,12 @@ public class AvianController {
     public List<Passenger> search(@RequestParam String firstName, @RequestParam String secondName) {
         return manager.searchPassenger(firstName, secondName);
     }
+
     @GetMapping("/baggagebyowner/{passengerId}")
     public List<BaggageDeclaration> getByOwnerId(@PathVariable long passengerId) {
         return manager.getAllbaggageDeclarationByOwner(passengerId);
     }
+
     @PostMapping("/save")
     public Passenger save(@RequestBody Passenger item) {
         return manager.save(item);
@@ -45,9 +49,9 @@ public class AvianController {
         return manager.removeById(id);
     }
 
-   // @GetMapping("/totalbaggageweidht")
-    //public List<Integer> getTotalWeight() {
-   //     return manager.totalweight();
-   // }
+   // @GetMapping("/totalbaggageweidhtonflight/{id}")
+    //public List<Integer> getTotalWeight(@PathVariable long id) {
+    //    return manager.totalweight();
+    //}
 
 }
