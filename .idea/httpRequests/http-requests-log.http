@@ -1,3 +1,123 @@
+POST http://127.0.0.1:8080/avian/save
+Content-Type: application/json
+
+{
+  "flightId": 3,
+  "firstName": "Salahov",
+  "secondName": "Robert",
+  "passportNumber": 934562323,
+  "passengerOnBoard": true,
+  "baggageOnBoard": false
+}
+
+<> 2020-12-12T152211.200.json
+
+###
+
+POST http://127.0.0.1:8080/avian/save
+Content-Type: application/json
+
+{
+  "flightId": 1,
+  "firstName": "Salahov",
+  "secondName": "Robert",
+  "passportNumber": 934562323,
+  "passengerOnBoard": true,
+  "baggageOnBoard": false
+}
+
+<> 2020-12-12T152153.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers
+
+<> 2020-12-12T152020.200.json
+
+###
+
+POST http://127.0.0.1:8080/avian/save
+Content-Type: application/json
+
+{
+  "flightId": 1,
+  "passengerId": 1,
+  "firstName": "Salahov",
+  "secondName": "Robert",
+  "passportNumber": 934562323,
+  "passengerOnBoard": true,
+  "baggageOnBoard": false
+}
+
+<> 2020-12-12T152001.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/baggagebyid/3
+
+<> 2020-12-12T151547.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers
+
+<> 2020-12-12T151522.200.json
+
+###
+
+POST http://127.0.0.1:8080/avian/save
+Content-Type: application/json
+
+{
+  "flightId": 1,
+  "passengerId": 7,
+  "firstName": "Salahov",
+  "secondName": "Robert",
+  "passportNumber": 934562323,
+  "passengerOnBoard": true,
+  "baggageOnBoard": false
+}
+
+<> 2020-12-12T151512.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengersbyflight/3
+
+<> 2020-12-12T151452.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/totalbaggageweidht
+
+<> 2020-12-12T151425.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/baggagebyowner/3
+
+<> 2020-12-12T151410.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
+
+<> 2020-12-12T151404.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/getallbaggage
+
+<> 2020-12-12T151357.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers
+
+<> 2020-12-12T151354.200.json
+
+###
+
 GET http://127.0.0.1:8080/avian/passengers
 
 <> 2020-12-12T150118.200.json
@@ -217,84 +337,6 @@ GET http://127.0.0.1:8080/avian/baggagebyid/3
 DELETE http://127.0.0.1:8080/avian/3
 
 <> 2020-12-12T141805.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T141754.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/baggagebyid/3
-
-<> 2020-12-12T141545.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T141539.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T140321.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T140126.500.json
-
-###
-
-DELETE http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T140103.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/baggagebyid/3
-
-<> 2020-12-12T135546.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T135532.200.json
-
-###
-
-POST http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T135303.405.json
-
-###
-
-GET http://127.0.0.1:8080/avian/baggagebyid/3
-
-<> 2020-12-12T134954.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T134052.405.json
-
-###
-
-POST http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T131728.405.json
-
-###
-
-GET http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T122659.405.json
 
 ###
 

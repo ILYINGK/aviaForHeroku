@@ -28,8 +28,7 @@ POST http://127.0.0.1:8080/avian/save
 Content-Type: application/json
 
 {
-  "flightId": 1,
-  "passengerId": 7,
+  "flightId": 3,
   "firstName": "Salahov",
   "secondName": "Robert",
   "passportNumber": 934562323,
@@ -44,11 +43,5 @@ DELETE http://127.0.0.1:8080/avian/3
 
 GET http://127.0.0.1:8080/avian/baggagebyid/3
 
-###
 
-GET https://project-flats.herokuapp.com/flats/1
 
-###
-GET http://127.0.0.1:8080/avian/baggagebyid/3
-
-###
