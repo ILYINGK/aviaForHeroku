@@ -174,6 +174,7 @@ public class AviaManager {
 
         return item;
     }
+
     public Integer totalweight() {
 
         return totalBaggageMassCountService.calculate(getALLbaggageDeclarations());

@@ -38,10 +38,13 @@ Content-Type: application/json
 ###
 DELETE https://avia-terminal.herokuapp.com/avian/3
 
-
 ###
 
 GET https://avia-terminal.herokuapp.com/avian/baggagebyid/3
 
+###
+
+GET http://127.0.0.1:8080/avian/totalbaggageweidht
 
 
+###
