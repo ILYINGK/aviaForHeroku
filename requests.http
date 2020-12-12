@@ -4,6 +4,9 @@ GET https://avia-terminal.herokuapp.com/avian/passengers
 ###
 GET http://127.0.0.1:8080/avian/passengers
 
+###
+GET http://127.0.0.1:8080/avian/getallbaggage
+
 
 ###
 GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan

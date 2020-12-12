@@ -28,7 +28,7 @@ import java.util.Map;
 public class AviaManager {
     private final NamedParameterJdbcTemplate template;
 
-    private TotalBaggageMassCountService totalBaggageMassCountService;
+    private final  TotalBaggageMassCountService totalBaggageMassCountService;
    private final FlightRowMapper flightRowMapper;
 
     private final PassengerRowMapper passengerRowMapper;
@@ -46,6 +46,24 @@ public class AviaManager {
                 "SELECT id, flight_id,  first_name, second_name,passport_number,passenger_on_board,baggage_on_board FROM passengers WHERE id = :id",
                 Map.of("id", id),
                 passengerRowMapper
+        );
+    }
+    public BaggageDeclaration getByIdDeclaration(long id) {
+        return template.queryForObject(
+
+                "SELECT id," +
+                        "passenger_id," +
+                        "sum_item," +
+                        "first_item_number," +
+                        "second_item_number," +
+                        "third_item_number," +
+                        "fourth_item_number," +
+                        "sum_weight " +
+                        "FROM baggage_declarations WHERE id = :id",
+
+
+                Map.of("id", id),
+                baggageDeclarationRowMapper
         );
     }
     public List<Passenger> searchPassenger(String firstName, String secondName) {
@@ -66,7 +84,7 @@ public class AviaManager {
                         "third_item_number," +
                         "fourth_item_number," +
                         "sum_weight " +
-                        "FROM baggage_declarations WHERE passenger_id = :passenger_id",
+                        "FROM baggage_declarations ORDER BY id LIMIT 50",
 
                 baggageDeclarationRowMapper
         );
@@ -132,19 +150,23 @@ public class AviaManager {
         return getById(item.getId());
     }
 
-    public Passenger removeById(long id) {
-        Passenger item = getById(id);
-
-        template.update(
+    public BaggageDeclaration removeById(long id) {
+        BaggageDeclaration item = getByIdDeclaration(id);
+        System.out.println("sout= "+item.getId());
+       /* template.update(
+                "DELETE FROM baggage_declarations WHERE id = :id",
+                Map.of("id", item.getId())
+        );*/
+      /*  template.update(
                 "DELETE FROM passengers WHERE id = :id",
                 Map.of("id", item.getId())
-        );
-///комент
+        );*/
+
         return item;
     }
     public Integer totalweight() {
 
-        return totalBaggageMassCountService.calculate();
+        return totalBaggageMassCountService.calculate(getALLbaggageDeclarations());
 
     }
 }

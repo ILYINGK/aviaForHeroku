@@ -38,14 +38,16 @@ public class AvianController {
     public List<BaggageDeclaration> getByOwnerId(@PathVariable long passengerId) {
         return manager.getAllbaggageDeclarationByOwner(passengerId);
     }
-
+    @GetMapping("/getallbaggage")
+    public List<BaggageDeclaration> getallbaggageDeclarations() { return manager.getALLbaggageDeclarations();
+    }
     @PostMapping("/save")
     public Passenger save(@RequestBody Passenger item) {
         return manager.save(item);
     }
 
     @DeleteMapping("/{id}")
-    public Passenger removeById(@PathVariable long id) {
+    public BaggageDeclaration removeById(@PathVariable long id) {
         return manager.removeById(id);
     }
 
