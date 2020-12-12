@@ -48,6 +48,16 @@ public class AviaManager {
                 passengerRowMapper
         );
     }
+
+
+
+    public List<Passenger> getAllpassengersByFlight(long id) {
+        return template.query(
+                "SELECT id, flight_id,  first_name, second_name,passport_number,passenger_on_board,baggage_on_board FROM passengers WHERE flight_id = :id",
+                Map.of("id", id),
+                passengerRowMapper
+        );
+    }
     public BaggageDeclaration getByIdDeclaration(long id) {
         return template.queryForObject(
 
@@ -150,17 +160,17 @@ public class AviaManager {
         return getById(item.getId());
     }
 
-    public BaggageDeclaration removeById(long id) {
-        BaggageDeclaration item = getByIdDeclaration(id);
-        System.out.println("sout= "+item.getId());
-       /* template.update(
-                "DELETE FROM baggage_declarations WHERE id = :id",
+    public Passenger removeById(long id) {
+        Passenger item = getById(id);
+
+        template.update(
+                "DELETE FROM baggage_declarations WHERE passenger_id = :id",
                 Map.of("id", item.getId())
-        );*/
-      /*  template.update(
+        );
+        template.update(
                 "DELETE FROM passengers WHERE id = :id",
                 Map.of("id", item.getId())
-        );*/
+        );
 
         return item;
     }

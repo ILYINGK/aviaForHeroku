@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import mail.ilyin_gk.avia.manager.AviaManager;
 import mail.ilyin_gk.avia.model.Passenger;
-import mail.ilyin_gk.avia.model.Flight;
+//import mail.ilyin_gk.avia.model.Flight;
 import mail.ilyin_gk.avia.model.BaggageDeclaration;
 
 import java.util.List;
@@ -47,7 +47,7 @@ public class AvianController {
     }
 
     @DeleteMapping("/{id}")
-    public BaggageDeclaration removeById(@PathVariable long id) {
+    public Passenger removeById(@PathVariable long id) {
         return manager.removeById(id);
     }
 
@@ -56,5 +56,13 @@ public class AvianController {
         return manager.totalweight();
     }
 
+    @GetMapping("/baggagebyid/{id}")
+    public BaggageDeclaration getBaggageById(@PathVariable long id) {
+        return manager.getByIdDeclaration(id);
+    }
+    @GetMapping("/passengersbyflight/{id}")
+    public List<Passenger> getPassengersByFlight(@PathVariable long id) {
+        return manager.getAllpassengersByFlight(id);
+    }
 
 }

@@ -19,43 +19,36 @@ GET http://127.0.0.1:8080/avian/totalbaggageweidht
 
 ###
 
+GET http://127.0.0.1:8080/avian/passengersbyflight/3
+###
+
+
+
 POST http://127.0.0.1:8080/avian/save
 Content-Type: application/json
 
 {
   "flightId": 1,
   "passengerId": 7,
-  "firstName": "Red",
+  "firstName": "Salahov",
   "secondName": "Robert",
   "passportNumber": 934562323,
-  "passengerOnBoard": false,
-  "baggageOnBoard": true
+  "passengerOnBoard": true,
+  "baggageOnBoard": false
 }
 ###
-POST http://127.0.0.1:8080/avian/3
+DELETE http://127.0.0.1:8080/avian/3
 
+
+###
+
+GET http://127.0.0.1:8080/avian/baggagebyid/3
 
 ###
 
 GET https://project-flats.herokuapp.com/flats/1
 
 ###
-
-GET https://project-flats.herokuapp.com/flats/search?district=Ново-Савиновский&rooms=1
-
-###
-
-GET https://project-flats.herokuapp.com/flats/save?id=0&district=Ново-Савиновский&rooms=1
+GET http://127.0.0.1:8080/avian/baggagebyid/3
 
 ###
-
-POST https://project-flats.herokuapp.com/flats
-Content-Type: application/json
-
-{
-  "id": 5,
-  "ownerId": 1,
-  "district": "Ново-Савиновский",
-  "price": 3,
-  "rooms": 1
-}
