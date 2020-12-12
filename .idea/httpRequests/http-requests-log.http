@@ -1,3 +1,9 @@
+GET https://avia-terminal.herokuapp.com/avian/passengers
+
+<> 2020-12-12T155946.200.json
+
+###
+
 GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
 
 <> 2020-12-12T155211.200.json
@@ -329,12 +335,6 @@ GET http://127.0.0.1:8080/avian/baggagebyid/1
 GET http://127.0.0.1:8080/avian/baggagebyid/5
 
 <> 2020-12-12T142011.500.json
-
-###
-
-GET http://127.0.0.1:8080/avian/baggagebyid/4
-
-<> 2020-12-12T142001.200.json
 
 ###
 

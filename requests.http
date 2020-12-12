@@ -2,29 +2,29 @@ GET https://avia-terminal.herokuapp.com/avian/passengers
 
 
 ###
-GET http://127.0.0.1:8080/avian/passengers
+GET https://avia-terminal.herokuapp.com/avian/passengers
 
 ###
-GET http://127.0.0.1:8080/avian/getallbaggage
+GET https://avia-terminal.herokuapp.com/avian/getallbaggage
 
 
 ###
-GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
+GET https://avia-terminal.herokuapp.com/avian/passengers/search?firstName=Petrov&secondName=Ivan
 ###
 
-GET http://127.0.0.1:8080/avian/baggagebyowner/3
+GET https://avia-terminal.herokuapp.com/avian/baggagebyowner/3
 ###
 
-GET http://127.0.0.1:8080/avian/totalbaggageweidht
+GET https://avia-terminal.herokuapp.com/avian/totalbaggageweidht
 
 ###
 
-GET http://127.0.0.1:8080/avian/passengersbyflight/3
+GET https://avia-terminal.herokuapp.com/avian/passengersbyflight/3
 ###
 
 
 
-POST http://127.0.0.1:8080/avian/save
+POST https://avia-terminal.herokuapp.com/avian/save
 Content-Type: application/json
 
 {
@@ -36,12 +36,12 @@ Content-Type: application/json
   "baggageOnBoard": false
 }
 ###
-DELETE http://127.0.0.1:8080/avian/3
+DELETE https://avia-terminal.herokuapp.com/avian/3
 
 
 ###
 
-GET http://127.0.0.1:8080/avian/baggagebyid/3
+GET https://avia-terminal.herokuapp.com/avian/baggagebyid/3
 
 
 
