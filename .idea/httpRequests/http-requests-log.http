@@ -1,3 +1,33 @@
+GET http://127.0.0.1:8080/avian/passengers
+
+<> 2020-12-12T150118.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengersbyflight/3
+
+<> 2020-12-12T150022.500.json
+
+###
+
+GET http://127.0.0.1:8080/avian/getallbaggage
+
+<> 2020-12-12T150003.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers
+
+<> 2020-12-12T145914.500.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
+
+<> 2020-12-12T145759.200.json
+
+###
+
 GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
 
 <> 2020-12-12T145728.200.json
@@ -265,36 +295,6 @@ POST http://127.0.0.1:8080/avian/3
 GET http://127.0.0.1:8080/avian/3
 
 <> 2020-12-12T122659.405.json
-
-###
-
-POST http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T121621.405.json
-
-###
-
-POST http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T120704.405.json
-
-###
-
-GET http://127.0.0.1:8080/avian/totalbaggageweidht
-
-<> 2020-12-12T115535.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/totalbaggageweidht
-
-<> 2020-12-12T115354.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/totalbaggageweidht
-
-<> 2020-12-12T115114.200.json
 
 ###
 
