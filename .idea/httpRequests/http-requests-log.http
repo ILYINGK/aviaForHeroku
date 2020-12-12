@@ -1,3 +1,9 @@
+GET http://127.0.0.1:8080/avian/passengers
+
+<> 2020-12-12T154012.200.json
+
+###
+
 POST http://127.0.0.1:8080/avian/save
 Content-Type: application/json
 
@@ -331,12 +337,6 @@ GET http://127.0.0.1:8080/avian/baggagebyid/2
 GET http://127.0.0.1:8080/avian/baggagebyid/3
 
 <> 2020-12-12T141825.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T141805.200.json
 
 ###
 
