@@ -1,3 +1,19 @@
+GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
+
+<> 2020-12-12T155211.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/baggagebyowner/3
+
+<> 2020-12-12T154547.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers
+
+###
+
 GET http://127.0.0.1:8080/avian/passengers
 
 <> 2020-12-12T154012.200.json
@@ -319,24 +335,6 @@ GET http://127.0.0.1:8080/avian/baggagebyid/5
 GET http://127.0.0.1:8080/avian/baggagebyid/4
 
 <> 2020-12-12T142001.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/baggagebyid/1
-
-<> 2020-12-12T141946.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/baggagebyid/2
-
-<> 2020-12-12T141909.500.json
-
-###
-
-GET http://127.0.0.1:8080/avian/baggagebyid/3
-
-<> 2020-12-12T141825.200.json
 
 ###
 
