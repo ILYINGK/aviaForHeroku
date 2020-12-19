@@ -1,3 +1,87 @@
+GET http://127.0.0.1:8080/avian/totalbaggageweidht
+
+<> 2020-12-19T135249.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/baggagebyid/3
+
+<> 2020-12-19T135238.200.json
+
+###
+
+DELETE http://127.0.0.1:8080/avian/deletepassenger/3
+
+<> 2020-12-19T135219.200.json
+
+###
+
+POST http://127.0.0.1:8080/avian/save
+Content-Type: application/json
+
+{
+  "flightId": 3,
+  "firstName": "Salahov",
+  "secondName": "Robert",
+  "passportNumber": 934562323,
+  "passengerOnBoard": true,
+  "baggageOnBoard": false
+}
+
+<> 2020-12-19T135156.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengersbyflight/3
+
+<> 2020-12-19T135138.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/totalbaggageweidht
+
+<> 2020-12-19T135132.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/baggagebyowner/3
+
+<> 2020-12-19T135126.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
+
+<> 2020-12-19T135118.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/getallbaggage
+
+<> 2020-12-19T135109.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers
+
+<> 2020-12-19T135048.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/totalbaggageweidht
+
+###
+
+GET http://127.0.0.1:8080/avian/passengers
+
+###
+
+DELETE https://avia-terminal.herokuapp.com/avian/deletepassenger/3
+
+<> 2020-12-19T100647.200.json
+
+###
+
 GET https://avia-terminal.herokuapp.com/avian/baggagebyowner/3
 
 <> 2020-12-19T095517.200.json
@@ -225,126 +309,6 @@ GET http://127.0.0.1:8080/avian/baggagebyowner/3
 ###
 
 GET http://127.0.0.1:8080/avian/passengers
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers
-
-<> 2020-12-12T154012.200.json
-
-###
-
-POST http://127.0.0.1:8080/avian/save
-Content-Type: application/json
-
-{
-  "flightId": 3,
-  "firstName": "Salahov",
-  "secondName": "Robert",
-  "passportNumber": 934562323,
-  "passengerOnBoard": true,
-  "baggageOnBoard": false
-}
-
-<> 2020-12-12T152211.200.json
-
-###
-
-POST http://127.0.0.1:8080/avian/save
-Content-Type: application/json
-
-{
-  "flightId": 1,
-  "firstName": "Salahov",
-  "secondName": "Robert",
-  "passportNumber": 934562323,
-  "passengerOnBoard": true,
-  "baggageOnBoard": false
-}
-
-<> 2020-12-12T152153.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers
-
-<> 2020-12-12T152020.200.json
-
-###
-
-POST http://127.0.0.1:8080/avian/save
-Content-Type: application/json
-
-{
-  "flightId": 1,
-  "passengerId": 1,
-  "firstName": "Salahov",
-  "secondName": "Robert",
-  "passportNumber": 934562323,
-  "passengerOnBoard": true,
-  "baggageOnBoard": false
-}
-
-<> 2020-12-12T152001.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/baggagebyid/3
-
-<> 2020-12-12T151547.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers
-
-<> 2020-12-12T151522.200.json
-
-###
-
-POST http://127.0.0.1:8080/avian/save
-Content-Type: application/json
-
-{
-  "flightId": 1,
-  "passengerId": 7,
-  "firstName": "Salahov",
-  "secondName": "Robert",
-  "passportNumber": 934562323,
-  "passengerOnBoard": true,
-  "baggageOnBoard": false
-}
-
-<> 2020-12-12T151512.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengersbyflight/3
-
-<> 2020-12-12T151452.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/totalbaggageweidht
-
-<> 2020-12-12T151425.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/baggagebyowner/3
-
-<> 2020-12-12T151410.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
-
-<> 2020-12-12T151404.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/getallbaggage
-
-<> 2020-12-12T151357.200.json
 
 ###
 

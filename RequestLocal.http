@@ -1,0 +1,50 @@
+GET http://127.0.0.1:8080/avian/passengers
+
+
+###
+GET http://127.0.0.1:8080/avian/passengers
+
+###
+GET http://127.0.0.1:8080/avian/getallbaggage
+
+
+###
+GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
+###
+
+GET http://127.0.0.1:8080/avian/baggagebyowner/3
+###
+
+GET http://127.0.0.1:8080/avian/totalbaggageweidht
+
+###
+
+GET http://127.0.0.1:8080/avian/passengersbyflight/3
+###
+
+
+
+POST http://127.0.0.1:8080/avian/save
+Content-Type: application/json
+
+{
+  "flightId": 3,
+  "firstName": "Salahov",
+  "secondName": "Robert",
+  "passportNumber": 934562323,
+  "passengerOnBoard": true,
+  "baggageOnBoard": false
+}
+###
+DELETE http://127.0.0.1:8080/avian/deletepassenger/3
+
+###
+
+GET http://127.0.0.1:8080/avian/baggagebyid/3
+
+###
+
+GET http://127.0.0.1:8080/avian/totalbaggageweidht
+
+
+###

@@ -10,12 +10,12 @@ INSERT INTO passengers(flight_id,
                        passport_number,
                        passenger_on_board,
                        baggage_on_board )  VALUES
-(1,'Petrov','Ivan',980712345,0,1),
-(2,'Suvorov','Aleksey',634512345,0,0),
-(2,'Ivanov','Nikolay',987852323,1,1),
-(3,'Patin','Ivan',980712345,0,1),
-(3,'Volkov','Aleksey',634512345,1,0),
-(3,'Selin','Robert',934562323,0,1);
+(1,'Petrov','Ivan','9807123451',0,1),
+(2,'Suvorov','Aleksey','6345123451',0,0),
+(2,'Ivanov','Nikolay','9878523231',1,1),
+(3,'Patin','Ivan','9807123451',0,1),
+(3,'Volkov','Aleksey','6345123451',1,0),
+(3,'Selin','Robert','9345623231',0,1);
 
 INSERT INTO baggage_declarations(id,
                                  passenger_id,
