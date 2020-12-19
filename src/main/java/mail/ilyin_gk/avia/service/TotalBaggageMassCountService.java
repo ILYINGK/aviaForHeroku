@@ -2,6 +2,7 @@ package mail.ilyin_gk.avia.service;
 
 import lombok.Value;
 import mail.ilyin_gk.avia.exception.NotFoundException;
+import mail.ilyin_gk.avia.exception.ServiseException;
 import mail.ilyin_gk.avia.model.BaggageDeclaration;
 import org.springframework.stereotype.Component;
 
@@ -22,6 +23,7 @@ public  TotalBaggageMassCountService(){
         int i = 0;
         while (i < array.size()) {
             totalWeight = totalWeight + array.get(i).getSumWeight();
+        if(i> array.size())throw new ServiseException("wrong array size");
             i++;
         }
         System.out.println("passId=  "+array.get(0).getId());

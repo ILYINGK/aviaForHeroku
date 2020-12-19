@@ -1,3 +1,21 @@
+GET http://127.0.0.1:8080/avian/totalbaggageweidht
+
+<> 2020-12-19T092436.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/totalbaggageweidht
+
+<> 2020-12-19T092205.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/passengersbyflight/3
+
+<> 2020-12-13T230130.200.json
+
+###
+
 GET https://avia-terminal.herokuapp.com/avian/baggagebyid/3
 
 <> 2020-12-12T182907.200.json
@@ -327,24 +345,6 @@ GET http://127.0.0.1:8080/avian/getallbaggage
 GET http://127.0.0.1:8080/avian/passengers
 
 <> 2020-12-12T145914.500.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
-
-<> 2020-12-12T145759.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
-
-<> 2020-12-12T145728.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengersbyflight/3
-
-<> 2020-12-12T145322.200.json
 
 ###
 
