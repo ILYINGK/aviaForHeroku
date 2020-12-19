@@ -1,3 +1,27 @@
+GET https://avia-terminal.herokuapp.com/avian/baggagebyowner/3
+
+<> 2020-12-19T095517.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/baggagebyid/3
+
+<> 2020-12-19T095457.200.json
+
+###
+
+DELETE https://avia-terminal.herokuapp.com/avian/3
+
+<> 2020-12-19T095336.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/totalbaggageweidht
+
+<> 2020-12-19T094701.200.json
+
+###
+
 GET https://avia-terminal.herokuapp.com/avian/totalbaggageweidht
 
 <> 2020-12-19T093403.200.json
@@ -321,30 +345,6 @@ GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Iv
 GET http://127.0.0.1:8080/avian/getallbaggage
 
 <> 2020-12-12T151357.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers
-
-<> 2020-12-12T151354.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers
-
-<> 2020-12-12T150118.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengersbyflight/3
-
-<> 2020-12-12T150022.500.json
-
-###
-
-GET http://127.0.0.1:8080/avian/getallbaggage
-
-<> 2020-12-12T150003.200.json
 
 ###
 

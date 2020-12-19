@@ -8,8 +8,7 @@ import org.springframework.test.web.client.MockMvcClientHttpRequestFactory;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 @SpringBootTest
@@ -144,6 +143,23 @@ class AviaApplicationTest {
                 .andExpect(
                         content()
                                 .json("84")
+                );
+
+        mockMvc.perform(
+                delete("/avian/deletepassenger/3")
+
+        )
+                .andExpect(
+                        content()
+                                .json("{\n" +
+                                        "  \"id\": 3,\n" +
+                                        "  \"flightId\": 2,\n" +
+                                        "  \"firstName\": \"Ivanov\",\n" +
+                                        "  \"secondName\": \"Nikolay\",\n" +
+                                        "  \"passportNumber\": 987852323,\n" +
+                                        "  \"passengerOnBoard\": true,\n" +
+                                        "  \"baggageOnBoard\": true\n" +
+                                        "}")
                 );
     }
 }

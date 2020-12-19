@@ -36,7 +36,7 @@ Content-Type: application/json
   "baggageOnBoard": false
 }
 ###
-DELETE https://avia-terminal.herokuapp.com/avian/3
+DELETE https://avia-terminal.herokuapp.com/avian/deletepassenger/3
 
 ###
 

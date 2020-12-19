@@ -46,7 +46,7 @@ public class AvianController {
         return manager.save(item);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/deletepassenger/{id}")
     public Passenger removeById(@PathVariable long id) {
         return manager.removeById(id);
     }
