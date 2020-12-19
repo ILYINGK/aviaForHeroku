@@ -44,7 +44,7 @@ GET https://avia-terminal.herokuapp.com/avian/baggagebyid/3
 
 ###
 
-GET http://127.0.0.1:8080/avian/totalbaggageweidht
+GET https://avia-terminal.herokuapp.com/avian/totalbaggageweidht
 
 
 ###

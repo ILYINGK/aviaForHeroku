@@ -1,3 +1,83 @@
+GET https://avia-terminal.herokuapp.com/avian/totalbaggageweidht
+
+<> 2020-12-19T140023.200.json
+
+###
+
+GET http://127.0.0.1:8080/avian/totalbaggageweidht
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/baggagebyid/3
+
+<> 2020-12-19T135823.200.json
+
+###
+
+DELETE https://avia-terminal.herokuapp.com/avian/deletepassenger/3
+
+<> 2020-12-19T135810.200.json
+
+###
+
+POST https://avia-terminal.herokuapp.com/avian/save
+Content-Type: application/json
+
+{
+  "flightId": 3,
+  "firstName": "Salahov",
+  "secondName": "Robert",
+  "passportNumber": 934562323,
+  "passengerOnBoard": true,
+  "baggageOnBoard": false
+}
+
+<> 2020-12-19T135755.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/passengersbyflight/3
+
+<> 2020-12-19T135747.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/totalbaggageweidht
+
+<> 2020-12-19T135739.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/baggagebyowner/3
+
+<> 2020-12-19T135731.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/passengers/search?firstName=Petrov&secondName=Ivan
+
+<> 2020-12-19T135723.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/getallbaggage
+
+<> 2020-12-19T135714.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/passengers
+
+<> 2020-12-19T135709.200.json
+
+###
+
+GET https://avia-terminal.herokuapp.com/avian/passengers
+
+<> 2020-12-19T135705.200.json
+
+###
+
 GET http://127.0.0.1:8080/avian/totalbaggageweidht
 
 <> 2020-12-19T135249.200.json
@@ -237,78 +317,6 @@ GET http://127.0.0.1:8080/avian/baggagebyid/3
 ###
 
 GET https://127.0.0.1:8080/avian/totalbaggageweidht
-
-###
-
-GET https://127.0.0.1:8080/avian/baggagebyid/3
-
-###
-
-GET https://avia-terminal.herokuapp.com/avian/passengersbyflight/3
-
-<> 2020-12-12T173200.200.json
-
-###
-
-GET https://127.0.0.1:8080/avian/totalbaggageweidht
-
-###
-
-GET https://127.0.0.1:8080/avian/totalbaggageweidht
-
-###
-
-GET https://127.0.0.1:8080/avian/totalbaggageweidht
-
-###
-
-GET http://127.0.0.1:8080/avian/3
-
-<> 2020-12-12T172918.405.json
-
-###
-
-GET http://127.0.0.1:8080/avian/totalbaggageweidht
-
-<> 2020-12-12T172810.500.json
-
-###
-
-POST http://127.0.0.1:8080/avian/save
-Content-Type: application/json
-
-{
-  "flightId": 3,
-  "firstName": "Salahov",
-  "secondName": "Robert",
-  "passportNumber": 9345623239,
-  "passengerOnBoard": true,
-  "baggageOnBoard": false
-}
-
-<> 2020-12-12T161900.500.json
-
-###
-
-GET https://avia-terminal.herokuapp.com/avian/passengers
-
-<> 2020-12-12T155946.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers/search?firstName=Petrov&secondName=Ivan
-
-<> 2020-12-12T155211.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/baggagebyowner/3
-
-<> 2020-12-12T154547.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers
 
 ###
 
