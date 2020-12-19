@@ -27,7 +27,7 @@ class AviaApplicationTest {
                                         "    \"flightId\": 1,\n" +
                                         "    \"firstName\": \"Petrov\",\n" +
                                         "    \"secondName\": \"Ivan\",\n" +
-                                        "    \"passportNumber\": 980712345,\n" +
+                                        "    \"passportNumber\": \"9807123451\",\n" +
                                         "    \"passengerOnBoard\": false,\n" +
                                         "    \"baggageOnBoard\": true\n" +
                                         "  },\n" +
@@ -36,7 +36,7 @@ class AviaApplicationTest {
                                         "    \"flightId\": 2,\n" +
                                         "    \"firstName\": \"Suvorov\",\n" +
                                         "    \"secondName\": \"Aleksey\",\n" +
-                                        "    \"passportNumber\": 634512345,\n" +
+                                        "    \"passportNumber\": \"6345123451\",\n" +
                                         "    \"passengerOnBoard\": false,\n" +
                                         "    \"baggageOnBoard\": false\n" +
                                         "  },\n" +
@@ -45,7 +45,7 @@ class AviaApplicationTest {
                                         "    \"flightId\": 2,\n" +
                                         "    \"firstName\": \"Ivanov\",\n" +
                                         "    \"secondName\": \"Nikolay\",\n" +
-                                        "    \"passportNumber\": 987852323,\n" +
+                                        "    \"passportNumber\": \"9878523231\",\n" +
                                         "    \"passengerOnBoard\": true,\n" +
                                         "    \"baggageOnBoard\": true\n" +
                                         "  },\n" +
@@ -54,7 +54,7 @@ class AviaApplicationTest {
                                         "    \"flightId\": 3,\n" +
                                         "    \"firstName\": \"Patin\",\n" +
                                         "    \"secondName\": \"Ivan\",\n" +
-                                        "    \"passportNumber\": 980712345,\n" +
+                                        "    \"passportNumber\": \"9807123451\",\n" +
                                         "    \"passengerOnBoard\": false,\n" +
                                         "    \"baggageOnBoard\": true\n" +
                                         "  },\n" +
@@ -63,7 +63,7 @@ class AviaApplicationTest {
                                         "    \"flightId\": 3,\n" +
                                         "    \"firstName\": \"Volkov\",\n" +
                                         "    \"secondName\": \"Aleksey\",\n" +
-                                        "    \"passportNumber\": 634512345,\n" +
+                                        "    \"passportNumber\": \"6345123451\",\n" +
                                         "    \"passengerOnBoard\": true,\n" +
                                         "    \"baggageOnBoard\": false\n" +
                                         "  },\n" +
@@ -72,7 +72,7 @@ class AviaApplicationTest {
                                         "    \"flightId\": 3,\n" +
                                         "    \"firstName\": \"Selin\",\n" +
                                         "    \"secondName\": \"Robert\",\n" +
-                                        "    \"passportNumber\": 934562323,\n" +
+                                        "    \"passportNumber\": \"9345623231\",\n" +
                                         "    \"passengerOnBoard\": false,\n" +
                                         "    \"baggageOnBoard\": true\n" +
                                         "  }]")
@@ -106,7 +106,7 @@ class AviaApplicationTest {
                                         "    \"flightId\": 1,\n" +
                                         "    \"firstName\": \"Petrov\",\n" +
                                         "    \"secondName\": \"Ivan\",\n" +
-                                        "    \"passportNumber\": 980712345,\n" +
+                                        "    \"passportNumber\": \"9807123451\",\n" +
                                         "    \"passengerOnBoard\": false,\n" +
                                         "    \"baggageOnBoard\": true\n" +
                                         "  }\n" +
@@ -119,7 +119,7 @@ class AviaApplicationTest {
                                 "  \"flightId\": 3,\n" +
                                 "  \"firstName\": \"Salahov\",\n" +
                                 "  \"secondName\": \"Robert\",\n" +
-                                "  \"passportNumber\": 934562323,\n" +
+                                "  \"passportNumber\": \"9345623231\",\n" +
                                 "  \"passengerOnBoard\": true,\n" +
                                 "  \"baggageOnBoard\": false\n" +
                                 "}")
@@ -130,7 +130,7 @@ class AviaApplicationTest {
                                         "  \"flightId\": 3,\n" +
                                         "  \"firstName\": \"Salahov\",\n" +
                                         "  \"secondName\": \"Robert\",\n" +
-                                        "  \"passportNumber\": 934562323,\n" +
+                                        "  \"passportNumber\": \"9345623231\",\n" +
                                         "  \"passengerOnBoard\": true,\n" +
                                         "  \"baggageOnBoard\": false\n" +
                                         "}")
@@ -156,7 +156,7 @@ class AviaApplicationTest {
                                         "  \"flightId\": 2,\n" +
                                         "  \"firstName\": \"Ivanov\",\n" +
                                         "  \"secondName\": \"Nikolay\",\n" +
-                                        "  \"passportNumber\": 987852323,\n" +
+                                        "  \"passportNumber\": \"9878523231\",\n" +
                                         "  \"passengerOnBoard\": true,\n" +
                                         "  \"baggageOnBoard\": true\n" +
                                         "}")
