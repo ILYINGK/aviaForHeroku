@@ -1,3 +1,9 @@
+GET https://avia-terminal.herokuapp.com/avian/totalbaggageweidht
+
+<> 2020-12-19T093403.200.json
+
+###
+
 GET http://127.0.0.1:8080/avian/totalbaggageweidht
 
 <> 2020-12-19T092436.200.json
@@ -339,12 +345,6 @@ GET http://127.0.0.1:8080/avian/passengersbyflight/3
 GET http://127.0.0.1:8080/avian/getallbaggage
 
 <> 2020-12-12T150003.200.json
-
-###
-
-GET http://127.0.0.1:8080/avian/passengers
-
-<> 2020-12-12T145914.500.json
 
 ###
 

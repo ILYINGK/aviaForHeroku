@@ -136,5 +136,14 @@ class AviaApplicationTest {
                                         "  \"baggageOnBoard\": false\n" +
                                         "}")
                 );
+
+        mockMvc.perform(
+                get("/avian/totalbaggageweidht")
+
+        )
+                .andExpect(
+                        content()
+                                .json("84")
+                );
     }
 }
