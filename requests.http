@@ -31,7 +31,7 @@ Content-Type: application/json
   "flightId": 3,
   "firstName": "Salahov",
   "secondName": "Robert",
-  "passportNumber": 934562323,
+  "passportNumber": "9345623231",
   "passengerOnBoard": true,
   "baggageOnBoard": false
 }
